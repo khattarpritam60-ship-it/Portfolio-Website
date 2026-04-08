@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pritam Kaur Khattar | Portfolio</title>
+    <meta name="description" content="Modern dark theme portfolio showcasing web development projects and skills">
+    <meta name="keywords" content="web developer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#3b82f6",
+                        secondary: "#8b5cf6",
+                        dark: "#0f172a",
+                        "dark-light": "#1e293b",
+                        "dark-lighter": "#334155"
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'mono': ['Fira Code', 'monospace']
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body class="bg-dark text-gray-300 font-sans min-h-screen">
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-dark/90 backdrop-blur-sm border-b border-dark-lighter">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#home" class="text-2xl font-bold text-white hover:text-primary transition-colors duration-300">
+                    <span class="text-primary">P</span>ritam <span class="text-secondary">K</span>aur <span class="text-secondary">K</span>hattar
+                </a>
+                <ul id="nav-menu" class="hidden md:flex space-x-8"></ul>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-400 hover:text-white">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="md:hidden hidden mt-4 space-y-4"></div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="container mx-auto px-4 py-16 md:py-24">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+                <div class="md:w-1/2">
+                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">
+                        Hi, I'm <span class="text-primary">Pritam Kaur Khattar</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl text-gray-400 mb-6">
+                        Web <span class="text-secondary font-mono">Developer</span>
+                    </h2>
+                    <p class="text-lg text-gray-400 mb-8 max-w-2xl">
+                        Passionate web Developer with strong knowledge of HTML, CSS, JavaScript, 
+                        and problem-solving skills. Experienced in building scalable applications using
+                        modern web technologies. Looking for an opportunity to grow and contribute 
+                        in a dynamic environment.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#projects" class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:-translate-y-1">
+                            View Projects
+                        </a>
+                        <a href="#contact" class="border border-dark-lighter hover:border-primary text-white px-6 py-3 rounded-lg font-medium transition-all duration-300">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 animate-pulse-slow"></div>
+                        <img src="image/IMG_0359 (2).JPG" alt="Pritam Kaur Khattar portrait" 
+                             class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 md:w-72 md:h-72 rounded-full object-cover border-4 border-dark">
+                        <div class="absolute -bottom-4 -right-4 bg-dark-light p-4 rounded-lg shadow-lg">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-white">20+</div>
+                                <div class="text-sm text-gray-400">Projects</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="bg-dark-light py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+                    Technical <span class="text-primary">Skills</span>
+                </h2>
+                <div id="skills-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+                    Featured <span class="text-secondary">Projects</span>
+                </h2>
+                <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline -->
+        <section id="experience" class="bg-dark-light py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+                    Summer <span class="text-primary">Training</span>
+                </h2>
+                <div id="timeline" class="max-w-3xl mx-auto"></div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+                    Get In <span class="text-secondary">Touch</span>
+                </h2>
+                <div class="max-w-2xl mx-auto">
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-gray-400 mb-2">Name</label>
+                                <input type="text" id="name" required 
+                                       class="w-full bg-dark-light border border-dark-lighter rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-400 mb-2">Email</label>
+                                <input type="email" id="email" required 
+                                       class="w-full bg-dark-light border border-dark-lighter rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-gray-400 mb-2">Subject</label>
+                            <input type="text" id="subject" required 
+                                   class="w-full bg-dark-light border border-dark-lighter rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-400 mb-2">Message</label>
+                            <textarea id="message" rows="5" required 
+                                      class="w-full bg-dark-light border border-dark-lighter rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors resize-none"></textarea>
+                        </div>
+                        <button type="submit" 
+                                class="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 rounded-lg transition-all duration-300 transform hover:-translate-y-1">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark border-t border-dark-lighter py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#home" class="text-2xl font-bold text-white hover:text-primary transition-colors">
+                        <span class="text-primary">P</span>ritam <span class="text-secondary">K</span>aur <span class="text-secondary">K</span>hattar
+                    </a>
+                    <p class="text-gray-500 mt-2">Building digital experiences since 2019</p>
+                </div>
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <ul id="social-links" class="flex space-x-4"></ul>
+                </div>
+                <div class="text-gray-500 text-sm">
+                    &copy; <span id="current-year"></span> Pritam Kaur Khattar. All rights reserved.
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-dark-lighter text-center text-gray-500 text-sm">
+                <ul id="footer-links" class="flex flex-wrap justify-center gap-6"></ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Data Layer
+        const navigationItems = [
+            { "label": "Home", "href": "#home", "icon": "fas fa-home" },
+            { "label": "Skills", "href": "#skills", "icon": "fas fa-code" },
+            { "label": "Projects", "href": "#projects", "icon": "fas fa-briefcase" },
+            { "label": "Experience", "href": "#experience", "icon": "fas fa-history" },
+            { "label": "Contact", "href": "#contact", "icon": "fas fa-envelope" }
+        ];
+
+        const skills = [
+            { "name": "HTML", "level": 90, "icon": "fab fa-html5", "color": "text-orange-400" },
+            { "name": "CSS", "level": 85, "icon": "fab fa-css3-alt", "color": "text-blue-500" },
+            { "name": "JavaScript", "level": 95, "icon": "fab fa-js", "color": "text-yellow-400" },
+            { "name": "SQL", "level": 88, "icon": "fas fa-database", "color": "text-purple-400" },
+            { "name": "Python", "level": 75, "icon": "fab fa-python", "color": "text-blue-300" },
+        ];
+
+        const projects = [
+            { 
+                "title": "Kisan Grocery Store", 
+                "description":"Built a Kisan Grocery App to bridge the gap between farmers and consumers by enabling direct purchase of fresh produce. Focused on improving accessibility, affordability, and transparency in grocery shopping. Developed key features such as product listing, price display, and basic order management. Designed a responsive and intuitive user interface to enhance user engagement.",
+                "image": "image/images (1).jpg",
+                "tags": ["HTML", "CSS", "JavaScript", "MySQL", "PHP"],
+                "link": "#"
+            }, 
+            { 
+                "title": "Portfolio Website", 
+                "description":"Built a personal portfolio website to present my projects, technical skills, and contact details. Focused on clean design, responsiveness, and easy navigation. The website highlights my work including projects like Kisan Grocery App and To-Do List Web App.",      
+                "image": "image/download.png",
+                "tags": ["HTML", "CSS", "JavaScript"],
+                "link": "#"
+            }, 
+            { 
+                "title": "To-Do List Web App", 
+                "description":"Built a To-Do List Web App to help users manage daily tasks in an organized way. Implemented core functionalities like adding, updating, and deleting tasks using JavaScript. Focused on creating a responsive and user-friendly interface with smooth interactions for better usability.",      
+                "image": "image/download (1).png",
+                "tags": ["HTML", "CSS", "JavaScript"],
+                "link": "#"
+            },
+        ];
+
+        const experience = [
+            { 
+                "year": "2020 - 2021", 
+                "role": "Web Developer", 
+                "company": "Brillica Services Pvt. Ltd.",
+                "description": "Played a key role in web developer to drive business growth and enhance operational efficiency. Collaborated with cross-functional teams to deliver high-quality solutions and meet client requirements. Developed and maintained strong client relationships,ensuring timely project delivery and customer satisfaction.",            
+            },            
+            { 
+                "year": "2021 - 2022", 
+                "role": "Python", 
+                "company": "Doon Advance Technical Academy",
+                "description": "Gained strong understanding of Python fundamentals such as variables, data types, loops, functions, and modules. Worked with Object-Oriented Programming (OOPs) concepts in Python. Hands-on experience with file handling and exception handling. Developed small programs and mini projects during training."
+            },
+        ];
+
+        const socialLinks = [
+            { "platform": "GitHub", "icon": "fab fa-github", "href": "#", "color": "hover:text-gray-300" },
+            { "platform": "LinkedIn", "icon": "fab fa-linkedin", "href": "#", "color": "hover:text-blue-400" },
+            { "platform": "Twitter", "icon": "fab fa-twitter", "href": "#", "color": "hover:text-sky-400" },
+            { "platform": "Dribbble", "icon": "fab fa-dribbble", "href": "#", "color": "hover:text-pink-400" }
+        ];
+
+        const footerLinks = [
+            { "label": "Privacy Policy", "href": "#privacy" },
+            { "label": "Terms of Service", "href": "#terms" },
+            { "label": "Cookie Policy", "href": "#cookies" },
+            { "label": "Sitemap", "href": "#sitemap" }
+        ];
+
+        // Reusable Render Functions
+        function renderNavItems(items) {
+            return items.map(item => 
+                `<li>
+                    <a href="${item.href}" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-2">
+                        <i class="${item.icon}"></i>
+                        ${item.label}
+                    </a>
+                </li>`
+            ).join("");
+        }
+
+        function renderSkills(items) {
+            return items.map(skill => 
+                `<div class="bg-dark p-6 rounded-xl border border-dark-lighter hover:border-primary/50 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <i class="${skill.icon} ${skill.color} text-xl"></i>
+                            <h3 class="text-white font-medium">${skill.name}</h3>
+                        </div>
+                        <span class="text-primary font-bold">${skill.level}%</span>
+                    </div>
+                    <div class="h-2 bg-dark-lighter rounded-full overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-primary to-secondary rounded-full" 
+                             style="width: ${skill.level}%"></div>
+                    </div>
+                </div>`
+            ).join("");
+        }
+
+        function renderProjects(items) {
+            return items.map(project => 
+                `<div class="group bg-dark-light rounded-xl overflow-hidden border border-dark-lighter hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="relative overflow-hidden">
+                        <img src="${project.image}" alt="${project.title}" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">${project.title}</h3>
+                        <p class="text-gray-400 mb-4">${project.description}</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            ${project.tags.map(tag => `<span class="px-3 py-1 bg-dark rounded-full text-sm text-gray-300">${tag}</span>`).join("")}
+                        </div>
+                        <a href="${project.link}" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+                            View Project
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>`
+            ).join("");
+        }
+
+        function renderExperience(items) {
+            return items.map((exp, index) => 
+                `<div class="relative pl-8 pb-8 ${index !== items.length - 1 ? 'border-l border-dark-lighter' : ''}">
+                    <div class="absolute left-0 top-0 w-4 h-4 bg-primary rounded-full -translate-x-1/2"></div>
+                    <div class="text-primary font-mono text-sm mb-1">${exp.year}</div>
+                    <h3 class="text-xl font-bold text-white mb-1">${exp.role}</h3>
+                    <div class="text-secondary font-medium mb-2">${exp.company}</div>
+                    <p class="text-gray-400">${exp.description}</p>
+                </div>`
+            ).join("");
+        }
+
+        function renderSocialLinks(items) {
+            return items.map(item => 
+                `<li>
+                    <a href="${item.href}" class="${item.color} text-gray-500 hover:text-white transition-colors duration-300 text-xl">
+                        <i class="${item.icon}"></i>
+                    </a>
+                </li>`
+            ).join("");
+        }
+
+        function renderFooterLinks(items) {
+            return items.map(item => 
+                `<li>
+                    <a href="${item.href}" class="text-gray-500 hover:text-white transition-colors duration-300">
+                        ${item.label}
+                    </a>
+                </li>`
+            ).join("");
+        }
+
+        // Initialize Page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current year
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            
+            // Render navigation
+            document.getElementById('nav-menu').innerHTML = renderNavItems(navigationItems);
+            document.getElementById('mobile-menu').innerHTML = renderNavItems(navigationItems);
+            
+            // Render skills
+            document.getElementById('skills-grid').innerHTML = renderSkills(skills);
+            
+            // Render projects
+            document.getElementById('projects-grid').innerHTML = renderProjects(projects);
+            
+            // Render experience
+            document.getElementById('timeline').innerHTML = renderExperience(experience);
+            
+            // Render social links
+            document.getElementById('social-links').innerHTML = renderSocialLinks(socialLinks);
+            
+            // Render footer links
+            document.getElementById('footer-links').innerHTML = renderFooterLinks(footerLinks);
+            
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.className = 'fas fa-bars text-xl';
+                } else {
+                    icon.className = 'fas fa-times text-xl';
+                }
+            });
+            
+            // Smooth scrolling for anchor links
+            document.addEventListener('click', function(event) {
+                const link = event.target.closest('a[href^="#"]');
+                if (!link) return;
+                
+                const href = link.getAttribute('href');
+                if (href === '#') return;
+                
+                event.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenuBtn.querySelector('i').className = 'fas fa-bars text-xl';
+                    }
+                    
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+            
+            // Contact form submission
+            const contactForm = document.getElementById('contact-form');
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                // Get form data
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    subject: document.getElementById('subject').value,
+                    message: document.getElementById('message').value
+                };
+                
+                // In a real application, you would send this to a server
+                console.log('Form submitted:', formData);
+                
+                // Show success message
+                alert('Thank you for your message! I\'ll get back to you soon.');
+                contactForm.reset();
+            });
+            
+            // Add scroll effect to header
+            let lastScroll = 0;
+            const header = document.querySelector('header');
+            
+            window.addEventListener('scroll', function() {
+                const currentScroll = window.pageYOffset;
+                
+                if (currentScroll <= 0) {
+                    header.classList.remove('shadow-lg');
+                    return;
+                }
+                
+                if (currentScroll > lastScroll) {
+                    // Scrolling down
+                    header.classList.add('shadow-lg');
+                } else {
+                    // Scrolling up
+                    header.classList.remove('shadow-lg');
+                }
+                
+                lastScroll = currentScroll;
+            });
+        });
+    </script>
+</body>
+</html>
